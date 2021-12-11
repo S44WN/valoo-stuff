@@ -1,0 +1,117 @@
+:root {
+  --surface-color: #ff4457;
+  --curve: 30;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body {
+  background-image: url(../images/valbackgrnd.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+.container {
+  color: #faf3ea;
+  padding: 2%;
+  width: 100%;
+  height: auto;
+}
+
+.container .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 0rem 1rem;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container .card {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  backdrop-filter: blur(9px) saturate(100%);
+  -webkit-backdrop-filter: blur(9px) saturate(100%);
+  background-color: rgba(17, 25, 40, 0.68);
+}
+
+.container .card__image {
+  width: 100%;
+  height: auto;
+  padding: 150px 0px 150px 0px;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.container .card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
+}
+
+.container .card__overlay .card__header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
+}
+
+.container .card__overlay .card__header .card__header-text .card__title {
+  font-size: 1.3em;
+  margin: 0 0 .3em;
+  color: #070606;
+}
+
+.container .card__overlay .card__header .card__header-text .card__status {
+  font-size: 1.1em;
+  color: #2c2827;
+}
+/*# sourceMappingURL=style-weapons.css.map */
